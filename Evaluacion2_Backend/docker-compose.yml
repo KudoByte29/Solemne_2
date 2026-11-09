@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  api-gateway:
+    image: nginx:alpine
+    ports:
+      - "3000:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+
+  graphql-gateway:
+    build: ./graphql
+    ports:
+      - "4000:4000"
+
+  inventory-service:
+    build: ./services/inventory
+    environment:
+      - DB_HOST=postgres-db
+
+  orders-service:
+    build: ./services/orders
+    environment:
+      - DB_HOST=postgres-db
+
+  clients-service:
+    build: ./services/clients
+    environment:
+      - DB_HOST=postgres-db
+
+  payments-service:
+    build: ./services/payments
+
+  postgres-db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: fukusuke_db
+      POSTGRES_USER: user_fukusuke
+      POSTGRES_PASSWORD: secret_password

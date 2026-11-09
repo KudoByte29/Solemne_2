@@ -1,0 +1,24 @@
+type Producto {
+  id: ID!
+  nombre: String!
+  precio: Float!
+  icono: String
+}
+
+type PedidoResumen {
+  id: ID!
+  fecha: String!
+  estado: String!
+  total: Float!
+  items: [DetalleItem!]!
+}
+
+type DetalleItem {
+  producto: Producto!
+  cantidad: Int!
+  subtotal: Float!
+}
+
+type Query {
+  obtenerMiPedidoResumen(pedidoId: ID!): PedidoResumen
+}

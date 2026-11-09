@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fukusuke Sushi-Delivery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Fukusuke Sushi-Delivery</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="#menu">Menú</a>
+      <a href="#carrito">Carrito</a>
+      <a href="registro.html">Registrarse</a>
+    </nav>
+  </header>
+
+  <div class="banner">
+    <h2>Ofertas del día</h2>
+    <p>Despacho gratis dentro de 3 km a la redonda</p>
+  </div>
+
+  <main>
+    <h2 id="menu">Nuestro menú</h2>
+    <div class="productos" id="lista-productos"></div>
+
+    <div class="carrito" id="carrito">
+      <h2>Tu pedido</h2>
+      <div id="items-carrito"></div>
+      <p class="total">Total: <span id="total">$0</span></p>
+      <button class="verde" id="btn-pagar">Ir a pagar</button>
+      <p id="mensaje-pago"></p>
+    </div>
+  </main>
+
+  <footer>Fukusuke Sushi-Delivery - Maipú</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

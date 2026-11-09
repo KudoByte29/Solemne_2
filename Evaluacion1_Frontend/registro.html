@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - Fukusuke</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Fukusuke Sushi-Delivery</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="index.html#menu">Menú</a>
+      <a href="registro.html">Registrarse</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Registro de cliente</h2>
+
+    <form id="form-registro">
+      <div>
+        <label for="run">RUN</label>
+        <input type="text" id="run" placeholder="12345678-9">
+      </div>
+      <div>
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre">
+      </div>
+      <div>
+        <label for="direccion">Dirección</label>
+        <input type="text" id="direccion">
+      </div>
+      <div>
+        <label for="comuna">Comuna</label>
+        <input type="text" id="comuna">
+      </div>
+      <div>
+        <label for="provincia">Provincia</label>
+        <input type="text" id="provincia">
+      </div>
+      <div>
+        <label for="region">Región</label>
+        <input type="text" id="region">
+      </div>
+      <div>
+        <label for="fecha">Fecha de nacimiento</label>
+        <input type="date" id="fecha">
+      </div>
+      <div>
+        <label for="sexo">Sexo</label>
+        <select id="sexo">
+          <option value="">Seleccione</option>
+          <option>Femenino</option>
+          <option>Masculino</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <div>
+        <label for="correo">Correo electrónico</label>
+        <input type="text" id="correo">
+      </div>
+      <div>
+        <label for="telefono">Teléfono</label>
+        <input type="text" id="telefono" placeholder="+56 9 1234 5678">
+      </div>
+      <div class="completo">
+        <p class="error" id="errores"></p>
+        <p class="ok" id="exito"></p>
+        <button type="submit">Crear cuenta</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>Fukusuke Sushi-Delivery - Maipú</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

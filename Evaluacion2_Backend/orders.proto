@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package fukusuke.orders;
+
+service KitchenOrderService {
+  rpc StreamKitchenOrders (KitchenRequest) returns (stream OrderEvent);
+}
+
+message KitchenRequest {
+  string kitchen_id = 1;
+}
+
+message OrderEvent {
+  string order_id = 1;
+  string status = 2;
+  repeated OrderItem items = 3;
+}
+
+message OrderItem {
+  string product_name = 1;
+  int32 quantity = 2;
+}
